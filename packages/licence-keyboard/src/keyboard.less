@@ -1,0 +1,126 @@
+.keyboard {
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  height: auto;
+  background: rgb(238, 238, 238);
+  z-index: 1001;
+  font-family: "PingFangSC-Regular", "Helvetica Neue", Arial, sans-serif;
+  .header {
+    height: 40px;
+    line-height: 40px;
+    background: #ffffff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 0 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    .clear {
+      float: left;
+      color: #666666;
+    }
+    .confirm {
+      float: right;
+      color: #14C9CC;
+    }
+  }
+  &-line {
+    text-align: center;
+    margin-bottom: 10px;
+    &__key {
+      display: inline-block;
+      background: #ffffff;
+      border-radius: 4px;
+      margin: 0 3px;
+      box-shadow: 0 1px 2px #DDDDDD;
+      font-size: 14px;
+      vertical-align: middle;
+      &:active {
+        background: #7b98b1;
+        color: #ffffff;
+      }
+    }
+    &__key.delete {
+      .remove {
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NiIgaGVpZ2h0PSI0NiIgdmlld0JveD0iMCAwIDQ2IDQ2Ij48cGF0aCBmaWxsPSIjOTk5IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00MiwzOUgxOGExLjk5LDEuOTksMCwwLDEtLjQ2Mi0wLjA1OSwzLjI2OCwzLjI2OCwwLDAsMS0yLjg4LS45MDZMMS45MTQsMjUuMjkxYTMuMjc3LDMuMjc3LDAsMCwxLDAtNC42MzRMMTQuNjU3LDcuOTE0YTMuMjY4LDMuMjY4LDAsMCwxLDMuMDA5LS44OEExLjk5MywxLjk5MywwLDAsMSwxOCw3SDQyYTQsNCwwLDAsMSw0LDRWMzVBNCw0LDAsMCwxLDQyLDM5Wk0zNy43LDE2Ljg0N0wzMS41MywyM2w2LjE0NSw2LjE0NWExLjA4NywxLjA4NywwLDEsMS0xLjUzNywxLjUzN0wyOS45OTEsMjQuNTRsLTYuMTI4LDYuMTE2YTEuMDg2LDEuMDg2LDAsMCwxLTEuNTM3LTEuNTM0TDI4LjQ1NSwyMywyMi4zLDE2Ljg1MWExLjA4NywxLjA4NywwLDAsMSwxLjUzNy0xLjUzN2w2LjE1NSw2LjE1NSw2LjE2OC02LjE1NkExLjA4NiwxLjA4NiwwLDEsMSwzNy43LDE2Ljg0N1oiLz48L3N2Zz4=");
+      }
+      :active {
+        background: #DDD;
+      }
+    }
+    &__key.disabled,
+    &__key.sixthDis {
+      background: #FFF;
+      color: #DDD;
+      pointer-events: none;
+    }
+    &.big {
+      > div {
+        height: 31px;
+        line-height: 31px;
+        width: 31px;
+      }
+      .delete {
+        width: 60px;
+        .remove {
+          background-size: 4.5vw;
+          padding: 4px 18px;
+        }
+      }
+    }
+    &.normal {
+      > div {
+        height: 27.5px;
+        line-height: 27.5px;
+        width: 27.5px;
+      }
+      .delete {
+        width: 60px;
+        .remove {
+          background-size: 4.5vw;
+          padding: 2px 18px;
+        }
+      }
+    }
+    &.mini > div {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInUp {
+  animation-name: slideInUp;
+}
+
+@keyframes slideOutDown {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+.slideOutDown {
+  animation-name: slideOutDown;
+}
