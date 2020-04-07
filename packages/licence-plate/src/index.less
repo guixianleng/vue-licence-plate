@@ -1,23 +1,20 @@
 .car-plate {
   background-color: #fff;
-  padding: 10px 16px;
-  .car-no__content {
-    text-align: center;
-    padding: 10px 0;
-  }
+  padding: 10px 0;
   .car-no__digit {
     display: inline-block;
+    text-align: center;
     width: 32px;
     height: 42px;
     line-height: 42px;
     border-radius: 3px;
     border: 1px solid #aaa;
-    margin-right: 5px;
+    margin-right: 6px;
     color: #333;
-    font-size: 18px;
+    font-size: 16px;
     vertical-align: middle;
     &:nth-child(2) {
-      margin-right: 20px;
+      margin-right: 22px;
       position: relative;
       &::after {
         position: absolute;
@@ -33,6 +30,7 @@
       }
     }
     &.isEnergy {
+      margin-right: 0;
       border: 1px dashed #aaa;
       background-size: 7.5vw;
       background-position: center;
@@ -52,7 +50,7 @@
   }
   .err {
     color: #FA5555;
-    margin: 0 0 5px;
+    margin: 5px 0;
     font-size: 12px;
     text-align: center;
   }

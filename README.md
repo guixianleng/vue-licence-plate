@@ -14,6 +14,7 @@ import Vue from 'vue'
 import licencePlate from 'vue-licence-plate'
 // 只有键盘
 import licenceKeyboard from 'vue-licence-keyboard'
+// 注册引入
 Vue.use(licencePlate)
 Vue.use(licenceKeyboard)
 ```
@@ -31,3 +32,6 @@ Vue.use(licenceKeyboard)
   }
 </script>
 ```
+
+### 效果图示
+![Image](https://raw.githubusercontent.com/guixianleng/vue-licence-plate/master/assets/images/case.gif)
