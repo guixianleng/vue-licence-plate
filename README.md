@@ -34,4 +34,4 @@ Vue.use(licenceKeyboard)
 ```
 
 ### 效果图示
-![Image](https://raw.githubusercontent.com/guixianleng/vue-licence-plate/master/assets/images/case.gif)
+![Image](https://raw.githubusercontent.com/guixianleng/vue-licence-plate/master/examples/assets/images/case.gif)
